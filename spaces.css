@@ -1,0 +1,46 @@
+body {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: fixed;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+
+}
+nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: antiquewhite;
+    color: black;
+    height: 75px;
+    width: 100%;
+}
+.sections{
+
+    height: 100vh;
+    width: 100%;
+ animation: smooth;
+
+}
+#landing-section{
+    background-color: aqua;
+}
+#noni-section{
+    background-color: rgb(179, 255, 0);
+}
+#nimnim-section{
+    background-color: rgb(110, 110, 235);
+}
+#lanlan-section{
+    background-color: rgb(204, 54, 212);
+}
+#rahrah-section{
+    background-color: rgb(245, 228, 82);
+}

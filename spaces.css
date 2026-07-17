@@ -8,6 +8,7 @@ body {
     background: fixed;
     background-color: rgb(255, 255, 255);
     margin: auto;
+    text-align: center;
 
 }
 html,body{scroll-behavior: smooth;}
@@ -29,6 +30,7 @@ a{
     font-size: 1.25rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgb(53, 53, 53);
+    text-align: center;
 }
 .sections{
 
@@ -37,7 +39,7 @@ a{
     display: flex;
     align-items: end;
     justify-content: center;
-
+  text-align: center;
 
 }
 
@@ -74,6 +76,7 @@ a{
 }
 #landing-section{
     background-color: rgb(255, 255, 255);
+    text-align: center;
 }
 
 #colours-moving{

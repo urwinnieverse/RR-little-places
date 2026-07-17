@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RR special places</title>
     <link rel="stylesheet" href="spaces.css">
+    <script src="spaces.js"></script>
 </head>
 
 <body>
@@ -19,11 +20,112 @@
         <a href="#rahrah-section" class="nav-links">Rahrah</a>
 
     </nav>
-    <section id="landing-section" class="sections"></section>
-    <section id="noni-section" class="sections"></section>
-    <section id="nimnim-section" class="sections"></section>
-    <section id="lanlan-section" class="sections"></section>
-    <section id="rahrah-section" class="sections"></section>
+    <section id="landing-section" class="sections">
+
+        <div id="colours-moving">
+
+            <div class="blocks" id="b1" style="background-color: #F1DEC4;"></div>
+            <div class="blocks" id="b2" style="background-color: #ffee8b;"></div>
+            <div class="blocks" id="b3" style="background-color: #eab6d3;"></div>
+            <div class="blocks" id="b4" style="background-color: #8cb4ff;"></div>
+            <div class="blocks" id="b5" style="background-color: #caa9dc;"></div>
+
+
+            <div id="content">
+                <h1>Welcome to RR's little spaces</h1>
+                <h3>Scroll down and take a look into their spaces!</h3>
+                <h5>Don't be shy</h5>
+            </div>
+
+        </div>
+
+
+
+    </section>
+    <section id="noni-section" class="sections">
+
+
+        <button id="noni-button" class="doors" onclick="showPopup('noni-pop')"> - </button>
+        <p class="door-names">Noni</p>
+    </section>
+    <section id="nimnim-section" class="sections">
+
+        <button id="nimnim-button" class="doors" onclick="showPopup('nimnim-pop')"> - </button>
+        <p class="door-names">Nimnim</p>
+    </section>
+    <section id="lanlan-section" class="sections">
+
+        <button id="lanlan-button" class="doors" onclick="showPopup('lanlan-pop')"> - </button>
+        <p class="door-names">Lanlan</p>
+    </section>
+    <section id="rahrah-section" class="sections">
+
+        <button id="rahrah-button" class="doors" onclick="showPopup('rahrah-pop')"> - </button>
+        <p class="door-names">Rahrah</p>
+    </section>
+
+
+
+    <!--pop ups-->
+
+    <!--noni-->
+
+    <div id="noni-pop" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('noni-pop')">&times;</span>
+            <label> Welcome!</label>
+            <label>To enter you should enter the password</label>
+            <p>Hint: our first group</p>
+            <input type="text" id="noni-pass" placeholder="PASSWORD">
+            <button id="noni-check" class="check"
+                onclick="check('noni-pass', 'noni-pic.png', 'stays island')">Confirm</button>
+        </div>
+    </div>
+    </div>
+
+    <!--nimnim-->
+
+    <div id="nimnim-pop" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('nimnim-pop')">&times;</span>
+            <label> Welcome!</label>
+            <label>To enter you should enter the password</label>
+            <p>Hint: how many days did we know each other (approximately)</p>
+            <input type="text" id="nimnim-pass" placeholder="PASSWORD">
+            <button id="noni-check" class="check"
+                onclick="check('nimnim-pass', 'nimnim-pic.png', '3807')">Confirm</button>
+        </div>
+    </div>
+    </div>
+
+    <!--lanlan-->
+
+    <div id="lanlan-pop" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('lanlan-pop')">&times;</span>
+            <label> Welcome!</label>
+            <label>To enter you should enter the password</label>
+            <p>Hint: your newest crush 😉</p>
+            <input type="text" id="lanlan-pass" placeholder="PASSWORD">
+            <button id="noni-check" class="check"
+                onclick="check('lanlan-pass', 'lanlan-pic.png', 'hassan')">Confirm</button>
+        </div>
+    </div>
+    </div>
+
+    <!--nimnim-->
+
+    <div id="rahrah-pop" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('rahrah-pop')">&times;</span>
+            <label> Welcome!</label>
+            <label>To enter you should enter the password</label>
+            <p>Hint: how many drawings have you drawn for me</p>
+            <input type="text" id="rahrah-pass" placeholder="PASSWORD">
+            <button id="noni-check" class="check" onclick="check('rahrah-pass', 'rahrah-pic.png', '2')">Confirm</button>
+        </div>
+    </div>
+    </div>
 
 
 

@@ -10,6 +10,7 @@ body {
     margin: auto;
 
 }
+html,body{scroll-behavior: smooth;}
 nav{
     position: sticky;
     top: 0;
@@ -17,30 +18,183 @@ nav{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    background-color: antiquewhite;
+    background-color: rgb(253, 249, 243);
     color: black;
     height: 75px;
     width: 100%;
+    z-index: 20;
+}
+a{
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(53, 53, 53);
 }
 .sections{
 
     height: 100vh;
     width: 100%;
- animation: smooth;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+
+}
+
+.doors{
+
+    height: 50vh;
+    width: 25vh;
+    background-color: burlywood;
+    border: 2vh burlywood solid;
+    box-shadow: inset 0 0 0 3px #6B463D;
+    text-align: left;
+    font-size: 4rem;
+    color: #6B463D;
+   padding-left: 2vh;
+
+}
+
+.door-names{
+
+   background-color: white;
+    height: 4vh;
+    width: max-content;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    border: 0.5vh burlywood solid;
+    box-shadow: inset 0 0 0 1px #6B463D;
+    margin-left: 3vh;
+    text-align: center;
+    color: #6B463D;
+    align-self: center;
+    margin-top: 20vh;
+
 
 }
 #landing-section{
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
 }
+
+#colours-moving{
+
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 110vw;
+
+}
+
+#colours-moving::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    backdrop-filter: blur(90px); 
+    -webkit-backdrop-filter: blur(90px);
+    z-index: 2; 
+    pointer-events: none;
+}
+
+#content {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    padding: 20px;
+    z-index: 10;
+    gap: 20px;
+}
+
+.blocks{
+
+    position: absolute;
+    z-index: 1;
+    width: 250px;  
+    height: 250px;
+    border-radius: 50%;
+    opacity: 0.75; 
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+#b1{top: 10% ; left: 20% ; animation: driftOne 20s infinite alternate ease-in-out;} #b2{top: 15% ; left: 75% ; animation: driftTwo 25s infinite alternate ease-in-out;} 
+#b3{top: 40% ; left: 5% ; animation: driftThree 18s infinite alternate ease-in-out;} #b4{top: 50% ; left: 61% ;animation: driftTwo 22s infinite alternate ease-in-out;} 
+#b5{top: 70%; left: 30% ; animation: driftOne 20s infinite alternate ease-in-out;} 
+
+@keyframes driftOne {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(150px, 80px) scale(1.3); }
+}
+
+@keyframes driftTwo {
+    0% { transform: translate(0, 0) scale(1.3); }
+    100% { transform: translate(-120px, 140px) scale(0.8); }
+}
+
+@keyframes driftThree {
+    0% { transform: translate(0, 0) scale(0.8); }
+    100% { transform: translate(100px, -150px) scale(1.2); }
+}
+
 #noni-section{
-    background-color: rgb(179, 255, 0);
+    background-color: #F1DEC4;
 }
 #nimnim-section{
-    background-color: rgb(110, 110, 235);
+    background-color: #ffee8b;
 }
 #lanlan-section{
-    background-color: rgb(204, 54, 212);
+    background-color: #5d91c8;
 }
 #rahrah-section{
-    background-color: rgb(245, 228, 82);
+    background-color: #caa9dc;
 }
+
+
+
+/*pop ups*/
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: #fff3f3;
+    padding: 20px;
+    text-align: center;
+    width: 60vh;
+    height: 30vh;
+    position: relative;
+    z-index: 1000;
+    border: 7px #fff3f3 solid;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
